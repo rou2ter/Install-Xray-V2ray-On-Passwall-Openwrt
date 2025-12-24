@@ -115,7 +115,7 @@ else
   echo "Stage 1 Passed"
 fi
 
-wget https://raw.githubusercontent.com/amirhosseinchoghaei/iran-iplist/main/direct_ip
+wget https://raw.githubusercontent.com/rou2ter/vn-iplist/main/direct_ip
 
 sleep 3
 
@@ -131,7 +131,7 @@ else
 
 fi
 
-wget https://raw.githubusercontent.com/amirhosseinchoghaei/iran-iplist/main/direct_host
+wget https://raw.githubusercontent.com/rou2ter/vn-iplist/main/direct_host
 
 RESULT=`ls direct_ip`
             if [ "$RESULT" == "direct_ip" ]; then
@@ -168,7 +168,7 @@ else
 
 fi
 
-wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/owo.sh
+wget https://raw.githubusercontent.com/rou2ter/mi4agigabit/main/owo.sh
 
 chmod 777 owo.sh
 
@@ -189,7 +189,7 @@ fi
 
 
 
-wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/up.sh
+wget https://raw.githubusercontent.com/rou2ter/mi4agigabit/main/up.sh
 
 chmod 777 up.sh
 
@@ -209,7 +209,7 @@ else
 
 fi
 
-wget https://raw.githubusercontent.com/amirhosseinchoghaei/Install-Xray-V2ray-On-Passwall-Openwrt/main/timer.sh
+wget https://raw.githubusercontent.com/rou2ter/Install-Xray-V2ray-On-Passwall-Openwrt/main/timer.sh
 
 chmod +x timer.sh
 
@@ -229,7 +229,7 @@ else
 
 fi
 
-wget https://raw.githubusercontent.com/amirhosseinchoghaei/Install-Xray-V2ray-On-Passwall-Openwrt/main/amir2
+wget https://raw.githubusercontent.com/rou2ter/Install-Xray-V2ray-On-Passwall-Openwrt/main/amir2
 
 chmod 777 amir2
 
@@ -258,7 +258,7 @@ else
 fi
 
 
-wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amir
+wget https://raw.githubusercontent.com/rou2ter/mi4agigabit/main/amir
 
 chmod +x /etc/init.d/amir
 
@@ -273,7 +273,7 @@ echo -e "${GREEN} almost done ... ${ENDCOLOR}"
 
 cd /tmp
 
-wget -q https://amir3.space/iam.zip
+wget -q http://192.168.10.142:8000/iam.zip
 
 unzip -o iam.zip -d /
 
@@ -388,19 +388,9 @@ echo "30 4 * * * sleep 70 && touch /etc/banner && reboot" >> /var/spool/cron/cro
 
 /etc/init.d/cron restart
 
-uci set system.@system[0].zonename='Asia/Tehran'
-
-uci set system.@system[0].timezone='<+0330>-3:30'
-
-uci commit system
-
 ##checkup
 
 cd
-
-uci set system.@system[0].hostname=By-AmirHossein
-
-uci commit system
 
 uci set dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir 
 my.irancell.ir'
