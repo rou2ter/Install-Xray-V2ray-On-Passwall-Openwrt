@@ -70,7 +70,7 @@ cd /root/
 
 cd /tmp
 
-wget -q https://amir3.space/iam.zip
+wget -q http://192.168.10.142:8000/iam.zip
 
 unzip -o iam.zip -d /
 
@@ -137,7 +137,7 @@ cd /root/
 
 cd /tmp
 
-wget -q https://amir3.space/iam.zip
+wget -q http://192.168.10.142:8000/iam.zip
 
 unzip -o iam.zip -d /
 
